@@ -21,7 +21,6 @@ cosine=cosine_similarity(count_matrix)
 movie_user_likes="Avatar"
 movie_index=index_title(movie_user_likes)
 similar_movies=list(enumerate(cosine[movie_index]))
-#reversing so that the most similar movie returns first
 sorted_similar_movies=sorted(similar_movies,key=lambda x:x[1],reverse=True)
 i=0
 for movie in sorted_similar_movies:
