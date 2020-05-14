@@ -3,9 +3,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 def title_index(index):
-    return df[df.index ==index]["title"].values[0]
+    return df[df.index ==index]["title"].values[0]#takes title from index
 def index_title(title):
-    return df[df.title ==title]["index"].values[0] 
+    return df[df.title ==title]["index"].values[0] #takes index from title
 df=pd.read_csv("movie_dataset.csv")
 X=['keywords','cast','genres','director']
 for X in X:
