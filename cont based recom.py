@@ -9,7 +9,7 @@ def index_title(title):
 df=pd.read_csv("movie_dataset.csv")#reads the csv file which should be available in your workspace folder
 X=['keywords','cast','genres','director']#the key points on which the movie is recommended
 for X in X:
-    df[X]=df[X].fillna(' ')
+    df[X]=df[X].fillna(' ')#if any data containg Null or na value it would be rplaced by blank space
 def all_X(row):
     try:
         return row['keywords']+" "+row["cast"]+" "+row["genres"]
