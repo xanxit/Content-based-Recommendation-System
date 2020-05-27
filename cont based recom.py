@@ -21,7 +21,7 @@ cosine=cosine_similarity(count_matrix)
 movie_user_likes="Avatar"#movie in accordance to which recommendation should be given
 movie_index=index_title(movie_user_likes)
 similar_movies=list(enumerate(cosine[movie_index]))#finding the cosine similarity of the movies
-sorted_similar_movies=sorted(similar_movies,key=lambda x:x[1],reverse=True)
+sorted_similar_movies=sorted(similar_movies,key=lambda x:x[1],reverse=True)#we will get cosine similarity in ascending order therefore we need to reverse it to get vlues desirably and we'd remove the first as if cosine distance is 1 it would be the same movie which the user like
 i=0
 for movie in sorted_similar_movies:
     print (title_index(movie[0]))
