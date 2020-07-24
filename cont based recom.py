@@ -13,7 +13,7 @@ for X in X:
 def all_X(row):
     try:
         return row['keywords']+" "+row["cast"]+" "+row["genres"]
-    except: print("error", row)
+    except: print("error", row)#giving out the error fields.
 df["all_X"]= df.apply(all_X,axis=1)
 cv=CountVectorizer()
 count_matrix=cv.fit_transform(df["all_X"])#The fit() function calculates the values of these parameters. The transform function applies the values of the parameters on the actual data and gives the normalized value. The fit_transform() function performs both in the same step. Note that the same value is got whether we perform in 2 steps or in a single step.
