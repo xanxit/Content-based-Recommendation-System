@@ -12,7 +12,7 @@ for X in X:
     df[X]=df[X].fillna(' ')#if any data containg Null or na value it would be rplaced by blank space
 def all_X(row):
     try:
-        return row['keywords']+" "+row["cast"]+" "+row["genres"]
+        return row['keywords']+" "+row["cast"]+" "+row["genres"] #returning the value after adding the rows containing keywords,cast and genres 
     except: print("error", row)#giving out the error fields.
 df["all_X"]= df.apply(all_X,axis=1)
 cv=CountVectorizer()
